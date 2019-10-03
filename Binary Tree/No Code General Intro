@@ -1,0 +1,22 @@
+How many different Unlabeled Binary Trees can be there with n nodes?
+
+The idea is to consider all possible pair of counts for nodes in left and right subtrees 
+and multiply the counts for a particular pair. Finally add results of all pairs.
+
+For example, let T(n) be count for n nodes.
+T(0) = 1  [There is only 1 empty tree]
+T(1) = 1
+T(2) = 2
+
+T(3) =  T(0)*T(2) + T(1)*T(1) + T(2)*T(0) = 1*2 + 1*1 + 2*1 = 5
+
+T(4) =  T(0)*T(3) + T(1)*T(2) + T(2)*T(1) + T(3)*T(0)
+     =  1*5 + 1*2 + 2*1 + 5*1 
+     =  14 
+ 
+ n’th Catalan Number can also be evaluated using direct formula.
+
+ T(n) = (2n)! / (n+1)!n!
+ 
+ Number of Labeled Tees = (Number of unlabeled trees) * n!
+                       = [(2n)! / (n+1)!n!]  × n!
