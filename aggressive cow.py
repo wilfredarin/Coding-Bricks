@@ -42,8 +42,7 @@ a = []
 for i in range(t):
 	a = []
 	n,cow = map(int,input().split())
-	for i in range(n):
-		a.append(int(input()))
+	a = list(map(int,input().split()))
 	aggresive_cow(n,cow,a)
 	
 	
