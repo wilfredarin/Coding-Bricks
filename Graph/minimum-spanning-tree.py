@@ -20,5 +20,5 @@ def spanningTree(V, E, graph):
         for nbr in range(V):
             if graph[min_node][nbr]!=float("inf") and not visited[nbr] and weight[nbr]>graph[min_node][nbr]:
                 weight[nbr] = graph[min_node][nbr]
-                parent[nbr] = vertex
+                parent[nbr] = min_node
     return (sum(weight))     
